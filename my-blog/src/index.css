@@ -1,68 +1,96 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
 body {
+  background-color: #d6b3b3;
+  font-family: "Segoe UI", Roboto, sans-serif;
+  color: #212529;
+  line-height: 1.6;
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+p {
+  margin-bottom: 1rem;
+}
+
+.home {
+  /* background-color: #e6b7b7; */ 
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 3rem;
+  font-family: Arial, sans-serif;
+  margin: 0;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.HomeTitle {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
 }
 
-button {
+#H {
+  background-color: black;
+  color: #d6b3b3; /* same pink as background */
+  font-size: 22rem;
+  font-weight: bold;
+  width: 30vw;
+  height: 30vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0.5rem;
+}
+
+#universe {
+  font-size: 5rem;
+  font-weight: bold;
+  color: black;
+}
+
+.about {
+  background-color: black;
+  color: white;
+  margin: 5px;
+  padding: 2rem;
   border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  width: 80%;
+  max-width: 600px;
+  text-align: center;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+#postsPage {
+   background-color: black;
+   color: #d6b3b3;
+   margin: 1vh 10vw 1vh 10vw;
+   padding: 1vh 1vw 1vh 1vw;
+   text-align: center;
+}
+
+#postsContainer {
+   display: flex;
+   flex-direction: column;
+   
+}
+
+.Post {
+   background-color: #d6b3b3;
+   color: black;
+   margin: 10px;
+   padding: 5px;
+   text-align: left;
+   border-radius: 5px;
+   display: flex;
+}
+
+.PostTitle {
+   margin: 5px;
+}
+
+.PostDate {
+   margin: 5px;
 }
