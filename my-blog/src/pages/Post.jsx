@@ -11,7 +11,7 @@ export default function Post() {
 
   useEffect(() => {
     console.log(post.file);
-    fetch(`md/${post.file}`)
+    fetch(`/md/${post.file}`)
       .then((res) => res.text())
       .then(setContent);
   }, [post]);
