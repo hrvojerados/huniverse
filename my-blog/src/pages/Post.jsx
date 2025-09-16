@@ -10,11 +10,12 @@ export default function Post() {
   const [content, setContent] = useState("");
 
   useEffect(() => {
-    fetch(`${import.meta.env.BASE_URL}posts/${post.file}`)
+    console.log(post.file);
+    fetch(`mdFiles/${post.file}`)
       .then((res) => res.text())
       .then(setContent);
   }, [post]);
-
+  console.log(content);
   if (!post) return <h2>Post not found</h2>;
 
   return (
