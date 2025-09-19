@@ -1,10 +1,18 @@
 import posts from "../posts.json";
+import tags from "../tags.json";
 import { Link } from "react-router-dom";
 
 export default function PostsPage() {
   return (
     <div id="postsPage">
       <div id="postsContainer">
+        <div className="tagsContainer">
+          {tags.map((tag) => (
+            <div className="tag">
+              tag
+            </div>
+          ))}
+        </div>
         {posts.map((post) => (
           <div className="Post" key={post.slug}>
             <div className="PostCard">
