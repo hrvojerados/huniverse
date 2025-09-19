@@ -1,3 +1,6 @@
+.link {
+  text-decoration: none;
+}
 body {
   background-color: #d6b3b3;
   font-family: "Segoe UI", Roboto, sans-serif;
@@ -17,55 +20,196 @@ p {
 }
 
 .home {
-  /* background-color: #e6b7b7; */ 
+  background-color: #e6b7b7; 
   min-height: 100vh;
-  display: flex;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-rows: 10vh 10vh 10vh 10vh 10vh 10vh 10vh 10vh 10vh 10vh;
+  grid-template-columns: 10vw 10vw 10vw 10vw 10vw 10vw 10vw 10vw 10vw 10vw;
   flex-direction: column;
   align-items: center;
-  padding-top: 3rem;
   font-family: Arial, sans-serif;
-  margin: 0;
 }
 
 .HomeTitle {
+  grid-area: 2 / 2 / 7 / 9;
   display: flex;
+  font-family:  "DM Serif Text", serif;
+  width: 100vw;
+  height: 50vh;
   align-items: center;
   margin-bottom: 2rem;
 }
 
 #H {
   background-color: black;
-  color: #d6b3b3; /* same pink as background */
-  font-size: 22rem;
+  color: #d6b3b3;
+  border-style: solid;
+  border-color: #ffffff;
+  font-size: 30vh; 
   font-weight: bold;
   width: 30vw;
-  height: 30vh;
+  height: 50vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-right: 0.5rem;
+  margin: 0;
+  padding: 0;
+  text-shadow: 
+    1px 1px 0 white,
+    -1px 1px 0 white,
+    1px -1px 0 white,
+    -1px -1px 0 white;
 }
 
 #universe {
-  font-size: 5rem;
+  width: 50vw;
+  height: 20vh;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 15vh;
   font-weight: bold;
   color: black;
+  text-shadow: 
+    1px 1px 0 white,
+    -1px 1px 0 white,
+    1px -1px 0 white,
+    -1px -1px 0 white;
 }
 
 .about {
+  grid-area: 8 / 5 / 9 / 9;
+  width: 50vw;
+  height: 30vh;
+  font-size: 1.75vh;
+  font-family: "Inter", sans-serif;
   background-color: black;
   color: white;
-  margin: 5px;
-  padding: 2rem;
+  margin: 3vw;
+  padding: 30px;
   border-radius: 8px;
-  width: 80%;
-  max-width: 600px;
   text-align: center;
 }
 
+.nav {
+  background-color: black;
+  display:flex;
+  justify-content: space-between;
+}
+
+.navbarLink {
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* .navbarLink:hover *{ */
+/*   background-color: darkgray; */
+/* } */
+
+#homeLink {
+  display: flex;
+  font-family:  "DM Serif Text", serif;
+}
+
+#navbarH {
+  margin: 10px;
+  color: black;
+  background-color: #d6b3b3;
+  border-style: solid;
+  border-color: #ffffff;
+  text-shadow: 
+    1px 1px 0 white,
+    -1px 1px 0 white,
+    1px -1px 0 white,
+    -1px -1px 0 white;
+  height: 5vh;
+  width: 2vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 3vh;
+}
+
+#navbarH:hover {
+  background-color: black;
+  color: #d6b3b3
+}
+
+#navbarUniverse {
+  color: #d6b3b3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+#navRight {
+  display: flex;
+  font-family: "Inter", sans-serif;
+  font-weight: bold;
+  justify-content: space-evenly;
+}
+
+#navPosts {
+  margin: 10px;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #d6b3b3
+}
+
+#navPosts:hover {
+  background-color: #d6b3b3;
+  color: black;
+  border-style: solid;
+  border-color: #ffffff;
+}
+
+#navAbout {
+  margin: 10px;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #d6b3b3
+}
+
+#navAbout:hover {
+  background-color: #d6b3b3;
+  color: black;
+  border-style: solid;
+  border-color: #ffffff;
+}
+
+#navContact {
+  margin: 10px;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #d6b3b3
+}
+
+#navContact:hover {
+  background-color: #d6b3b3;
+  color: black;
+  border-style: solid;
+  border-color: #ffffff;
+}
+
 #postsPage {
-   background-color: black;
-   color: #d6b3b3;
+   font-family: "Inter", sans-serif;
+   background-color: #2f3e46;
+   border-style: solid;
+   border-radius: 2vh;
    margin: 1vh 10vw 1vh 10vw;
    padding: 1vh 1vw 1vh 1vw;
    text-align: center;
@@ -74,23 +218,94 @@ p {
 #postsContainer {
    display: flex;
    flex-direction: column;
+   padding-top: 3vh;
    
 }
 
-.Post {
-   background-color: #d6b3b3;
+.PostCard {
+   font-family: "Inter", sans-serif;
+   font-weight: bold;
+   background-color: #f5f0e1;
    color: black;
    margin: 10px;
    padding: 5px;
    text-align: left;
+   border-color: black;
+   border-style: solid;
    border-radius: 5px;
    display: flex;
+   justify-content: space-between;
+   min-height: 10vh;
 }
 
 .PostTitle {
+   overflow-wrap: anywhere;
    margin: 5px;
+   font-size: 2rem;
 }
 
-.PostDate {
-   margin: 5px;
+.open {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5vh;
+  width: 5vw;
+  background-color: #ff6b6b; 
+  border-style: solid;
+  border-color: #2f3e46;
+  border-radius: 1vh;
+  color: black;
 }
+
+.open:hover {
+  background-color: #e9c46a;
+}
+
+.openPostLink {
+  margin: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.BlogPost {
+  padding-left: 25vw;
+  padding-right: 25vw;
+  font-family: "Inter", sans-serif;
+}
+
+.BlogPostTitle {
+  overflow-wrap: anywhere;
+  font-weight: bold;
+  font-size: 6rem;
+  text-align: left;
+}
+
+.BlogPostContent {
+  font-size: 1.5rem;
+}
+/* ntroduce one lively highlight color for links/buttons: */
+/**/
+/* Background: pale pink/rose (#e5c7c7) */
+/**/
+/* Posts area: dark gray (#1e1e1e) */
+/**/
+/* Cards: very light gray (#fafafa) */
+/**/
+/* Highlight color: coral (#ff6b6b) or turquoise (#4ecdc4) */
+/**/
+/* This way your "Read more" really pops. */
+/**/
+/* 3. Earthy Palette */
+/**/
+/* Shift into a slightly more natural, cozy palette: */
+/**/
+/* Background: soft clay (#d8b4a0) */
+/**/
+/* Posts area: dark olive (#2f3e46) */
+/**/
+/* Cards: linen (#f5f0e1) */
+/**/
+/* Accents: mustard (#e9c46a) or terracotta (#e07a5f) */
+/**/
+/* This gives a warm, vintage blog vibe. */

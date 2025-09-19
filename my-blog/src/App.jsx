@@ -2,6 +2,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Post from "./pages/Post";
+import Contact from "./pages/Contact";
+import About from "./pages/About";
 import PostsPage from "./pages/PostsPage";
 
 export default function App() {
@@ -13,6 +15,8 @@ export default function App() {
           <Route path="" element={<PostsPage />} />
           <Route path=":slug" element={<Post />} />
         </Route>
+        <Route path="/about" element={<About/>}/>
+        <Route path="/contact" element={<Contact/>}/>
       </Routes>
     </Router>
   );
