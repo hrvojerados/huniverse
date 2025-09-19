@@ -89,8 +89,25 @@ p {
   color: white;
   margin: 3vw;
   padding: 30px;
+  display: flex;
+  flex-direction: column;
   border-radius: 8px;
   text-align: center;
+}
+
+#infoButton {
+  /* grid-area: 7 / 2 / 8 / 3; */
+  grid-area: 8 / 9 / 6 / 7;
+  background-color: black;
+  color: white;
+  border-style: solid;
+  border-color: white;
+  border-radius: 20px;
+}
+
+#infoButton:hover {
+  background-color: #d6b3b3;
+  color: black;
 }
 
 .nav {
@@ -262,6 +279,7 @@ p {
 }
 
 .openPostLink {
+  text-decoration: none;
   margin: 30px;
   display: flex;
   justify-content: center;

@@ -42,11 +42,11 @@ export default function Post() {
   if (!post) return <h2>Post not found</h2>;
 
   return (
-    <div class="BlogPost">
-      <div class="BlogPostTitle">{post.title}</div>
+    <div className="BlogPost">
+      <div className="BlogPostTitle">{post.title}</div>
       <p>{formatDate(post.date)}</p>
       <hr />
-      <div class="BlogPostContent">
+      <div className="BlogPostContent">
         <ReactMarkdown
           remarkPlugins={[remarkGfm, remarkMath, remarkBreaks, remarkFootnotes]}
           rehypePlugins={[

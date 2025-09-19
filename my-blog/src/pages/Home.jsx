@@ -1,15 +1,23 @@
 import { Link } from "react-router-dom";
-// import { useState } from "react";
+import { useState } from "react";
 export default function Home() {
-  // const [showAbout, setShow] = useState(false);
+  const [showAbout, setShow] = useState(false);
 
   return (
-    <div class="home">
-      <div class="HomeTitle">
+    <div className="home">
+      <div className="HomeTitle">
          <div id="H">H</div>
          <div id="universe">universe</div>
       </div>
-      <div class="about">
+      { !showAbout &&
+        <button id="infoButton"
+        onClick={() => setShow(prev => !prev)}>
+          Info 
+        </button>
+      }
+
+      { showAbout && (
+      <div className="about">
         <h2>About me and this page</h2>
         <p>
           Hi my name is Hrvoje Radoš and this
@@ -28,8 +36,11 @@ export default function Home() {
         <Link to="/posts">
           Click here to view my blog posts         
         </Link>
+        <button onClick={() => setShow((prev) => !prev)}>
+            hide
+        </button>
       </div>
-
+      )}
     </div>
   );
 }

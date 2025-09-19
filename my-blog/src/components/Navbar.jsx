@@ -3,9 +3,9 @@ import { Link, Outlet } from "react-router-dom";
 export default function Navbar() {
   return (
     <>
-    <div class="nav">
+    <div className="nav">
       <div id="homeLink">
-        <Link to="/" class="navbarLink">
+        <Link to="/" className="navbarLink">
           <div id="navbarH">
             H
           </div>
@@ -16,17 +16,17 @@ export default function Navbar() {
       </div>
 
       <div id="navRight">
-        <Link to="/posts" class="navbarLink">
+        <Link to="/posts" className="navbarLink">
           <div id="navPosts">
             Posts
           </div>
         </Link>
-        <Link to="/about" class="navbarLink">
+        <Link to="/about" className="navbarLink">
           <div id="navAbout">
             About
           </div>
         </Link>
-        <Link to="/contact" class="navbarLink">
+        <Link to="/contact" className="navbarLink">
           <div id="navContact">
             Contact
           </div>

@@ -7,10 +7,10 @@ export default function PostsPage() {
       <div id="postsContainer">
         {posts.map((post) => (
           <div className="Post" key={post.slug}>
-            <div class="PostCard">
+            <div className="PostCard">
               <div className="PostTitle">{post.title}</div>
-              <Link to={`/posts/${post.slug}`} class="link">
-                <div class="open">
+              <Link to={`/posts/${post.slug}`} className="openPostLink">
+                <div className="open">
                   Open
                 </div>
               </Link>
