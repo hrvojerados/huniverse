@@ -1,6 +1,7 @@
 .link {
   text-decoration: none;
 }
+
 body {
   background-color: #d6b3b3;
   font-family: "Segoe UI", Roboto, sans-serif;
@@ -15,28 +16,40 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0.5rem;
   font-weight: 600;
 }
+
+h1 {
+  overflow-wrap: anywhere;
+  font-weight: bold;
+  font-size: 6rem;
+  text-align: left;
+}
+
 p {
   margin-bottom: 1rem;
 }
 
+.pageContainer {
+  padding-left: 25vw;
+  padding-right: 25vw;
+  font-family: "Inter", sans-serif;
+}
+
+.pageContent {
+  font-size: 1.5rem;
+}
+
 .home {
   background-color: #d6b3b3; 
-  /* min-height: 100vh; */
-  /* min-width: 100vw; */
   margin: 0;
   padding: 0;
   height: 100vh;
   width: 100vw;
-  /* display: grid; */
-  /* grid-template-rows: 10vh 10vh 10vh 10vh 10vh 10vh 10vh 10vh 10vh 10vh; */
-  /* grid-template-columns: 10vw 10vw 10vw 10vw 10vw 10vw 10vw 10vw 10vw 10vw; */
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .HomeTitle {
-  /* grid-area: 2 / 2 / 7 / 9; */
   display: flex;
   font-family:  "DM Serif Text", serif;
   width: auto;
@@ -72,7 +85,7 @@ p {
     transform: scale(1);
   }
   50% {
-    transform: scale(1.06); /* gentle grow */
+    transform: scale(1.06);
   }
 }
 
@@ -114,7 +127,6 @@ p {
 }
 
 #infoButton {
-  /* grid-area: 7 / 2 / 8 / 3; */
   grid-area: 8 / 9 / 6 / 7;
   background-color: black;
   color: white;
@@ -142,10 +154,6 @@ p {
   justify-content: center;
   align-items: center;
 }
-
-/* .navbarLink:hover *{ */
-/*   background-color: darkgray; */
-/* } */
 
 #homeLink {
   display: flex;
@@ -253,8 +261,6 @@ p {
 #postsContainer {
    display: flex;
    flex-direction: column;
-   /* padding-top: 3vh; */
-   
 }
 
 .Date {
@@ -272,12 +278,9 @@ p {
 .tagsContainer {
   display: flex;
   overflow-wrap: wrap;
-  /* background-color: white; */
 }
 
 #filterSvg {
-  /* position: absolute; */
-  /* top: 0; */
   margin: 10px;
   width: 3vw;
   height: 3vh;
@@ -289,11 +292,6 @@ p {
   align-items: center;
   overflow-wrap: anywhere;
   font-weight: bold;
-  /* text-shadow:  */
-  /*   0px 1px 0 white, */
-  /*   0px 1px 0 white, */
-  /*   0px -1px 0 white, */
-  /*   0px -1px 0 white; */
   margin: 10px;
   background-color: #ff6b6b;
   border-style: solid;
@@ -373,11 +371,6 @@ p {
   align-items: center;
 }
 
-.BlogPost {
-  padding-left: 25vw;
-  padding-right: 25vw;
-  font-family: "Inter", sans-serif;
-}
 
 .BlogPostTitle {
   overflow-wrap: anywhere;
@@ -386,31 +379,61 @@ p {
   text-align: left;
 }
 
-.BlogPostContent {
-  font-size: 1.5rem;
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+  height: 40vh;
 }
-/* ntroduce one lively highlight color for links/buttons: */
-/**/
-/* Background: pale pink/rose (#e5c7c7) */
-/**/
-/* Posts area: dark gray (#1e1e1e) */
-/**/
-/* Cards: very light gray (#fafafa) */
-/**/
-/* Highlight color: coral (#ff6b6b) or turquoise (#4ecdc4) */
-/**/
-/* This way your "Read more" really pops. */
-/**/
-/* 3. Earthy Palette */
-/**/
-/* Shift into a slightly more natural, cozy palette: */
-/**/
-/* Background: soft clay (#d8b4a0) */
-/**/
-/* Posts area: dark olive (#2f3e46) */
-/**/
-/* Cards: linen (#f5f0e1) */
-/**/
-/* Accents: mustard (#e9c46a) or terracotta (#e07a5f) */
-/**/
-/* This gives a warm, vintage blog vibe. */
+
+label {
+  font-size: 2rem;
+  margin: 1vh;
+}
+
+.inputName {
+  margin: 10px;
+  background-color: #f5f0e1;
+  border-style: solid;
+  border-color: black;
+  border-radius: 5px;
+  width: 20vw;
+  height: 3vh;
+}
+
+.inputMail {
+  margin: 10px;
+  background-color: #f5f0e1;
+  border-style: solid;
+  border-color: black;
+  border-radius: 5px;
+  width: 30vw;
+  height: 3vh;
+}
+
+.inputMessage {
+  margin: 10px;
+  background-color:#f5f0e1;
+  border-style: solid;
+  border-color: black;
+  border-radius: 5px;
+  width: 50vw;
+  height: 30vh;
+}
+
+.sendButton {
+  background-color: #ff6b6b;
+  font-weight: bold;
+  border-style: solid;
+  border-color: black;
+  padding: 2vh;
+  border-radius: 5px;
+  width: 10vw;
+  height: 10vh;
+  align-self: center;
+}
+
+.sendButton:hover {
+  background-color: #e9c46a;
+}

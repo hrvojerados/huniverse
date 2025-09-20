@@ -2,18 +2,7 @@ import posts from "../posts.json";
 import tags from "../tags.json";
 import { Link } from "react-router-dom";
 import { useState } from "react";
-
-function formatDate(dateString) {
-  const months = [
-    "January", "February", "March", "April", "May", "June",
-    "July", "August", "September", "October", "November", "December"
-  ];
-
-  const [year, month, day] = dateString.split("-").map(Number);
-  const monthName = months[month - 1];
-
-  return `${monthName} ${day}, ${year}`;
-}
+import { formatDate, hasIntersection } from "../utils";
 
 function formatTags(tags) {
   let val = "";
@@ -31,12 +20,6 @@ function toogleTag(tag, selected) {
   }
 }
 
-function hasIntersection(arr1, arr2) {
-  return arr1.some(item => arr2.includes(item));
-}
-
-console.log(hasIntersection([1, 2, 3], [3, 4, 5])); // true
-console.log(hasIntersection([1, 2], [3, 4]));       // false
 export default function PostsPage() {
   const [selectedTags, setSelectedTags] = useState(tags);
 

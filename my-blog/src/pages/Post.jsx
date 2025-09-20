@@ -12,19 +12,7 @@ import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypeExternalLinks from "rehype-external-links";
 
 import posts from "../posts.json";
-
-
-function formatDate(dateString) {
-  const months = [
-    "January", "February", "March", "April", "May", "June",
-    "July", "August", "September", "October", "November", "December"
-  ];
-
-  const [year, month, day] = dateString.split("-").map(Number);
-  const monthName = months[month - 1];
-
-  return `${monthName} ${day}, ${year}`;
-}
+import {formatDate} from "../utils.js";
 
 export default function Post() {
   const { slug } = useParams();
@@ -42,11 +30,11 @@ export default function Post() {
   if (!post) return <h2>Post not found</h2>;
 
   return (
-    <div className="BlogPost">
-      <div className="BlogPostTitle">{post.title}</div>
+    <div className="pageContainer">
+      <h1>{post.title}</h1>
       <p>{formatDate(post.date)}</p>
       <hr />
-      <div className="BlogPostContent">
+      <div className="pageContent">
         <ReactMarkdown
           remarkPlugins={[remarkGfm, remarkMath, remarkBreaks, remarkFootnotes]}
           rehypePlugins={[
