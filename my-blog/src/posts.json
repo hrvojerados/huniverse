@@ -3,72 +3,14 @@
     "slug": "hello-world",
     "title": "Hello World",
     "date": "2025-09-15",
-    "file": "post1.md"
+    "file": "post1.md",
+    "tags": ["projects", "math"]
   },
   {
     "slug": "second-post",
     "title": "Second Post",
     "date": "2025-09-16",
-    "file": "post2.md"
-  },
-  {
-    "slug": "third-post",
-    "title": "Euler Lagrage",
-    "date": "2025-09-18",
-    "file": "el.md"
-  },
-  {
-    "slug": "second-post",
-    "title": "Second Post",
-    "date": "2025-09-16",
-    "file": "post2.md"
-  },
-  {
-    "slug": "second-post",
-    "title": "Second Post",
-    "date": "2025-09-16",
-    "file": "post2.md"
-  },
-  {
-    "slug": "second-post",
-    "title": "Second Post",
-    "date": "2025-09-16",
-    "file": "post2.md"
-  },
-  {
-    "slug": "second-post",
-    "title": "Second Post",
-    "date": "2025-09-16",
-    "file": "post2.md"
-  },
-  {
-    "slug": "second-post",
-    "title": "Second Post",
-    "date": "2025-09-16",
-    "file": "post2.md"
-  },
-  {
-    "slug": "second-post",
-    "title": "Second Post",
-    "date": "2025-09-16",
-    "file": "post2.md"
-  },
-  {
-    "slug": "second-post",
-    "title": "Second Post",
-    "date": "2025-09-16",
-    "file": "post2.md"
-  },
-  {
-    "slug": "second-post",
-    "title": "Second Post",
-    "date": "2025-09-16",
-    "file": "post2.md"
-  },
-  {
-    "slug": "second-post",
-    "title": "Second Post",
-    "date": "2025-09-16",
-    "file": "post2.md"
+    "file": "post2.md",
+    "tags": ["CS", "math"]
   }
 ]

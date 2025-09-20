@@ -64,7 +64,7 @@ p {
     -2px 2px 0 white,
     2px -2px 0 white,
     -2px -2px 0 white;
-  animation: breathe 5s ease-in-out infinite;
+  animation: breathe 3s ease-in-out infinite;
 }
 
 @keyframes breathe {
@@ -253,19 +253,77 @@ p {
 #postsContainer {
    display: flex;
    flex-direction: column;
-   padding-top: 3vh;
+   /* padding-top: 3vh; */
    
+}
+
+.Date {
+  margin: 0;
+}
+
+.DateAndTags {
+  font-weight: normal;
+}
+
+.Tags {
+  margin: 0;
 }
 
 .tagsContainer {
   display: flex;
   overflow-wrap: wrap;
-  background-color: white;
+  /* background-color: white; */
+}
+
+#filterSvg {
+  /* position: absolute; */
+  /* top: 0; */
+  margin: 10px;
+  width: 3vw;
+  height: 3vh;
 }
 
 .tag {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-wrap: anywhere;
+  font-weight: bold;
+  /* text-shadow:  */
+  /*   0px 1px 0 white, */
+  /*   0px 1px 0 white, */
+  /*   0px -1px 0 white, */
+  /*   0px -1px 0 white; */
   margin: 10px;
   background-color: #ff6b6b;
+  border-style: solid;
+  border-color: black;
+  border-radius: 10px;
+  width: 7vw;
+  height: 5vh;
+}
+
+.tag:hover {
+  background-color: #e9c46a;
+}
+
+.selectedTag {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-wrap: anywhere;
+  font-weight: bold;
+  margin: 10px;
+  background-color: #4ecdc4;
+  border-style: solid;
+  border-color: black;
+  border-radius: 10px;
+  width: 7vw;
+  height: 5vh;
+}
+
+.selectedTag:hover {
+  background-color: #e9c46a;
 }
 
 .PostCard {
