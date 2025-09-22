@@ -34,6 +34,14 @@ p {
   font-family: "Inter", sans-serif;
 }
 
+.pageContainer img {
+  display: block; /* Important for margin: auto to work horizontally */
+  margin: 0 auto;
+  /* Optional: Set a max-width if the image is too large */
+  max-width: 100%; 
+  height: auto;
+}
+
 .pageContent {
   font-size: 1.5rem;
 }

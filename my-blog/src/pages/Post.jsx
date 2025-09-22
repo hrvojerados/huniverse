@@ -1,6 +1,13 @@
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
-import ReactMarkdown from "react-markdown";
+import Markdown from "react-markdown";
+import remarkGfm from 'remark-gfm';
+import rehypeKatex from 'rehype-katex'
+import remarkMath from 'remark-math'
+import 'katex/dist/katex.min.css'
+
+import rehypeHighlight from 'rehype-highlight';
+import 'highlight.js/styles/github.css'
 
 import posts from "../posts.json";
 import {formatDate} from "../utils.js";
@@ -26,9 +33,11 @@ export default function Post() {
       <p>{formatDate(post.date)}</p>
       <hr />
       <div className="pageContent">
-        <ReactMarkdown>
+        <Markdown
+          rehypePlugins={[rehypeKatex, rehypeHighlight]}
+          remarkPlugins={[remarkMath, remarkGfm]}>
           {content}
-        </ReactMarkdown>
+        </Markdown>
       </div>
     </div>
   );
