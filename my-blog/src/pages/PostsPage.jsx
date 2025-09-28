@@ -7,21 +7,34 @@ import { formatDate, hasIntersection } from "../utils";
 function formatTags(tags) {
   let val = "";
   for (const tag of tags) {
-    val  += ("#" + tag + "   ");
+    if (tag != "all") {
+      val  += ("#" + tag + "   ");
+    }
   }
   return val;
 }
 
 function toogleTag(tag, selected) {
-  if (selected.includes(tag)) {
-    return selected.filter((t) => (t != tag));
-  } else {
-    return [... selected, tag];
+  if (tag === "all") {
+    if (selected.length === 1 && selected[0] === "all") {
+      return [];
+    }
+    return ["all"];
   }
+
+  if (selected.includes("all")) {
+    return [tag];
+  }
+
+  if (selected.includes(tag)) {
+    return selected.filter((t) => t !== tag);
+  }
+
+  return [...selected, tag];
 }
 
 export default function PostsPage() {
-  const [selectedTags, setSelectedTags] = useState(tags);
+  const [selectedTags, setSelectedTags] = useState("all");
 
   return (
     <div id="postsPage">
