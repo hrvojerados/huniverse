@@ -31,7 +31,7 @@ export default function Contact() {
       <div className="pageContainer">
         <h1>Contact Me</h1>
         <form className="contactForm" onSubmit={onSubmit}>
-          <label>
+          <label className="formInput">
             Name:
             <input
               className="inputName"
@@ -40,7 +40,7 @@ export default function Contact() {
               required
             />
           </label>
-          <label>
+          <label className="formInput">
             Email:
             <input
               className="inputMail"
@@ -49,7 +49,7 @@ export default function Contact() {
               required
             />
           </label>
-          <label>
+          <label className="formInput">
             Message:
             <br />
             <textarea
