@@ -1,0 +1,16 @@
+[
+  {
+    "slug": "hello-world",
+    "title": "Hello World",
+    "date": "2025-09-15",
+    "file": "post1.md",
+    "tags": ["all", "projects", "math"]
+  },
+  {
+    "slug": "second-post",
+    "title": "Second Post",
+    "date": "2025-09-16",
+    "file": "post2.md",
+    "tags": ["all","CS", "math"]
+  }
+]
