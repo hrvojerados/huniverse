@@ -36,38 +36,53 @@ function toogleTag(tag, selected) {
 export default function PostsPage() {
   const [selectedTags, setSelectedTags] = useState("all");
 
-  return (
-    <div id="postsPage">
-      <div id="postsContainer">
-        <img src="images/filter.svg" id="filterSvg"/> 
-        <div className="tagsContainer">
-          {tags.map((tag) => (
-            <button 
-              className={selectedTags.includes(tag) ? "selectedTag" : "tag"}
-              onClick={() => setSelectedTags((prev) => toogleTag(tag, prev))}>
-              {tag}
-            </button>
-          ))}
-        </div>
-        {posts.map((post) => hasIntersection(post.tags, selectedTags) && (
-          <div className="Post" key={post.slug}>
-            <div className="PostCard">
-              <div className="PostData">
-                <div className="PostTitle">{post.title}</div>
-                <div className="DateAndTags">
-                  <p className="Date">{formatDate(post.date)}</p>
-                  <p className="Tags">{formatTags(post.tags)}</p>
+  const visiblePosts = posts.filter(post =>
+    hasIntersection(post.tags, selectedTags));
+    return (
+      <div id="postPageWraper">
+        <div id="postsPage">
+          <div id="postsContainer">
+            <img src="images/filter.svg" id="filterSvg" /> 
+
+            <div className="tagsContainer">
+              {tags.map((tag) => (
+                <button 
+                  key={tag}
+                  className={selectedTags.includes(tag) ? "selectedTag" : "tag"}
+                  onClick={() =>
+                    setSelectedTags((prev) => toogleTag(tag, prev))
+                  }
+                >
+                  {tag}
+                </button>
+              ))}
+            </div>
+
+            {visiblePosts.map((post) => (
+              <div className="Post" key={post.slug}>
+                <div className="PostCard">
+                  <div className="PostData">
+                    <div className="PostTitle">{post.title}</div>
+                    <div className="DateAndTags">
+                      <p className="Date">{formatDate(post.date)}</p>
+                      <p className="Tags">{formatTags(post.tags)}</p>
+                    </div>
+                  </div>
+
+                  <Link to={`/posts/${post.slug}`} className="openPostLink">
+                    <div className="open">Open</div>
+                  </Link>
                 </div>
               </div>
-              <Link to={`/posts/${post.slug}`} className="openPostLink">
-                <div className="open">
-                  Open
-                </div>
-              </Link>
-            </div>
+            ))}
           </div>
-        ))}
+        </div>
+
+        {(visiblePosts.length === 0) &&
+        (
+          <div className="centerer">
+            <div id="noPosts">No posts yet :)</div>
+          </div>)}
       </div>
-    </div>
-  );
+    );
 }

@@ -26,6 +26,12 @@ p {
   margin-bottom: 1rem;
 }
 
+.centerer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .link {
   color: gray;
 }
@@ -271,6 +277,13 @@ p {
 #postsContainer {
    display: flex;
    flex-direction: column;
+}
+
+#noPosts {
+  margin-top: 10vh;
+  font-family: "Inter", sans-serif;
+  font-weight: bold;
+  font-size: 5vh;
 }
 
 .Date {

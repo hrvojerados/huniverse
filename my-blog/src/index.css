@@ -29,6 +29,12 @@ p {
   margin-bottom: 1rem;
 }
 
+.centerer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .pageContainer {
   padding-left: 25vw;
   padding-right: 25vw;
@@ -257,6 +263,11 @@ p {
   border-color: #ffffff;
 }
 
+#postPageWraper {
+  display: flex;
+  flex-direction: column;
+}
+
 #postsPage {
    font-family: "Inter", sans-serif;
    background-color: #2f3e46;
@@ -270,6 +281,13 @@ p {
 #postsContainer {
    display: flex;
    flex-direction: column;
+}
+
+#noPosts {
+  margin-top: 10vh;
+  font-family: "Inter", sans-serif;
+  font-weight: bold;
+  font-size: 5vh;
 }
 
 .Date {
