@@ -4,7 +4,7 @@ We organize lectures, camps, and workshops intended for popularizing math, compe
 I also prepared lectures for competitions in physics at my former high school. I did all of this without pay, which is why I always refer to this as my "volunteer work. "
 
 
-When I mentioned to my roommate that I planned to put my volunteering work on my CV, he replied , "Just don't be humble about it. These things are not the type to be humble about." This is just paraphrasing , but this is essentially what he told me.
+When I mentioned to my roommate that I planned to put my volunteering work on my CV, he replied , "Just don't be humble about it. These things are not the type to be humble about." This is just paraphrasing.
 While I do believe he was right, I feel that writing a few excessive sentences related to my volunteering on my CV lacks a lot of taste. I didn't start volunteering to promote myself. I did it — as I will later write — to have fun and make friends. Yes, I knew that I would be able to put it on my CV, but that was very much in the background.
 Because of this, among other things, the idea of making my own blog emerged.
 Now that I have finally made my blog, I am able to tell a story of personal growth, math , and — somewhat surprisingly — action. It's my goal to make this interesting to other people just as much as it was interesting to me to participate in all of this, to help other people do similar things in their free time, and to help other people get to know me a little better.
