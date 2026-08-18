@@ -4,6 +4,7 @@ import Markdown from "react-markdown";
 import remarkGfm from 'remark-gfm';
 import rehypeKatex from 'rehype-katex'
 import remarkMath from 'remark-math'
+import rehypeRaw from 'rehype-raw';
 import 'katex/dist/katex.min.css'
 
 import rehypeHighlight from 'rehype-highlight';
@@ -29,12 +30,12 @@ export default function Post() {
 
   return (
     <div className="pageContainer">
-      <h1>{post.title}</h1>
+      <h2>{post.title}</h2>
       <p>{formatDate(post.date)}</p>
       <hr />
       <div className="pageContent">
         <Markdown
-          rehypePlugins={[rehypeKatex, rehypeHighlight]}
+          rehypePlugins={[rehypeKatex, rehypeHighlight, rehypeRaw]}
           remarkPlugins={[remarkMath, remarkGfm]}>
           {content}
         </Markdown>

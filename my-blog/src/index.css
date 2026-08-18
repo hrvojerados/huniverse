@@ -25,6 +25,10 @@ h1 {
   text-align: left;
 }
 
+h2 {
+  font-size: 3rem;
+}
+
 p {
   margin-bottom: 1rem;
 }
@@ -51,6 +55,14 @@ p {
 
 .pageContent {
   font-size: 1.5rem;
+  background-color: #ebd9d9;
+  padding: 16px;
+  border: 2px solid rgba(0, 0, 0, 0.4);
+  border-radius: 8px;
+}
+.pageContent2 {
+  font-size: 1.5rem;
+  padding: 16px;
 }
 
 .home {
@@ -158,7 +170,7 @@ p {
 .nav {
   background-color: black;
   display:flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
 }
 
 .navbarLink {
@@ -212,7 +224,10 @@ p {
   display: flex;
   font-family: "Inter", sans-serif;
   font-weight: bold;
+  font-size: 1.5rem;
   justify-content: space-evenly;
+  width: 30vw;
+  margin-left: 28vw;
 }
 
 #navPosts {
@@ -221,7 +236,9 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #d6b3b3
+  color: #d6b3b3;
+  border-style: solid;
+  border-color: black;
 }
 
 #navPosts:hover {
@@ -237,7 +254,9 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #d6b3b3
+  color: #d6b3b3;
+  border-style: solid;
+  border-color: black;
 }
 
 #navAbout:hover {
@@ -253,7 +272,9 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #d6b3b3
+  color: #d6b3b3;
+  border-style: solid;
+  border-color: black;
 }
 
 #navContact:hover {

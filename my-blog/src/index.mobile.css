@@ -22,6 +22,10 @@ h1 {
   text-align: left;
 }
 
+h2 {
+  font-size: 3rem;
+}
+
 p {
   margin-bottom: 1rem;
 }
@@ -475,6 +479,14 @@ label {
 
 .sendButton:hover {
   background-color: #e9c46a;
+}
+
+.pageContent {
+  font-size: 1.5rem;
+  background-color: #ebd9d9;
+  padding: 16px;
+  border: 2px solid rgba(0, 0, 0, 0.4);
+  border-radius: 8px;
 }
 
 }

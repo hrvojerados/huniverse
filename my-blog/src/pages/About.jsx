@@ -8,11 +8,11 @@ export default function About() {
       <Navbar/>
     <div className="pageContainer">
       <h1>About Me</h1>
-      <div className="pageContent">
+      <div className="pageContent2">
           Hi my name is Hrvoje Radoš and this
           is my website/blog.
       </div>
-      <div className="pageContent">
+      <div className="pageContent2">
           I plan to use this 
           website primarily to share the projects 
           on which I have worked on or on which I'm 
@@ -20,7 +20,7 @@ export default function About() {
           to get to know me through my own space on 
           the Interneet.
       </div>
-      <div className="pageContent">
+      <div className="pageContent2">
           I plan to post a wide variety of posts here
           (hence the "universe" in the name) and I 
           hope you'll enjoy reading them.
