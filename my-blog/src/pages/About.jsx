@@ -5,33 +5,40 @@ import Navbar from "../components/Navbar";
 export default function About() {
   return (
     <>
-      <Navbar/>
-    <div className="pageContainer">
-      <h1>About Me</h1>
-      <div className="pageContent2">
-          Hi my name is Hrvoje Radoš and this
-          is my website/blog.
-      </div>
-      <div className="pageContent2">
-          I plan to use this 
-          website primarily to share the projects 
-          on which I have worked on or on which I'm 
-          working on. But I also want people 
-          to get to know me through my own space on 
-          the Interneet.
-      </div>
-      <div className="pageContent2">
-          I plan to post a wide variety of posts here
-          (hence the "universe" in the name) and I 
-          hope you'll enjoy reading them.
-      </div>
-      <h2>GitHub:</h2>
-      <div>
-          <a href="https://github.com/hrvojerados">GitHub_hrvojerados</a>
-      </div>
-      <h2>LinkedIn:</h2>
-      <div>
-          <a href="https://www.linkedin.com/in/hrvoje-rado%C5%A1-8797a224a/?originalSubdomain=hr">LinkedIn</a>
+    <Navbar/>
+    <div className="page-container">
+      <div className="about-page-text">
+        <div className="about-images">
+          <img src="images/liarsDice.jpg" alt="Hrvoje playing Liar's Dice" />
+          <img src="images/Lisabon.jpg" alt="Hrvoje in Lisbon" />
+          <img src="images/LjubljanaMuseum.jpg" alt="Hrvoje at the Ljubljana museum" />
+          <img src="images/Milano.jpg" alt="Hrvoje in Milan" />
+        </div>
+        <h1>About Me</h1>
+        Hi my name is Hrvoje Radoš and this
+        is my blog. I am a second year master's student
+        of computer science at the Faculty of Electrical Engineering 
+        and Computing at University of Zagreb. I have a lot of interests.
+        Professionaly, I am interested in general ML research. Currently, 
+        I assist in the research group "TakeLab" which primarily deals with 
+        problems in NLP. I am mostly attracted to math-heavy topics. 
+        Right now, I am studying "Information Geometry". This is a field 
+        of machine learning that views probabilistic concepts from machine 
+        learning through the lens of differential geometry. 
+        Lifestyle wise, I have even more interests. I try to enjoy as many 
+        things in life because I believe that when some things aren't going
+        our way, it's good to have some things that cheer us up. I am a big 
+        Formula 1 fan. I like to travel. I like to pursue physical activities.
+        I love any form of volunteering that helps other people. Since I have 
+        always had the need to document some thoughts and share them with others, 
+        I plan to post a wide variety of posts here (hence the "universe"
+        in the name) and I 
+        hope you'll enjoy reading them.
+
+        <h1>GitHub:</h1>
+        <a href="https://github.com/hrvojerados">GitHub_hrvojerados</a>
+        <h1>LinkedIn:</h1>
+        <a href="https://www.linkedin.com/in/hrvoje-rado%C5%A1-8797a224a/?originalSubdomain=hr">LinkedIn</a>
       </div>
 
     </div>

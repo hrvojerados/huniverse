@@ -4,11 +4,11 @@ export default function Home() {
   // console.log(import.meta.env.VITE_ENV);
   return (
     <div className="home">
-      <div className="HomeTitle">
-         <Link to="/posts" className="link">
-           <div id="H">H</div>
+      <div className="home-title">
+         <Link to="/posts" className="home-link">
+           <div id="home-logo">H</div>
          </Link>
-         <div id="universe">universe</div>
+         <div id="home-wordmark">universe</div>
       </div>
     </div>
   );

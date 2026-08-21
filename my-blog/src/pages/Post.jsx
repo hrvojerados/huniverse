@@ -29,11 +29,11 @@ export default function Post() {
   if (!post) return <h2>Post not found</h2>;
 
   return (
-    <div className="pageContainer">
-      <h2>{post.title}</h2>
-      <p>{formatDate(post.date)}</p>
-      <hr />
-      <div className="pageContent">
+    <div className="page-container">
+      <div className="post-title">{post.title}</div>
+      <div className="post-date">{formatDate(post.date)}</div>
+      <hr/>
+      <div className="page-content">
         <Markdown
           rehypePlugins={[rehypeKatex, rehypeHighlight, rehypeRaw]}
           remarkPlugins={[remarkMath, remarkGfm]}>

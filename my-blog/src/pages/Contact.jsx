@@ -28,39 +28,41 @@ export default function Contact() {
   return (
     <>
       <Navbar />
-      <div className="pageContainer">
-        <h1>Contact Me</h1>
-        <form className="contactForm" onSubmit={onSubmit}>
-          <label className="formInput">
+      <div className="page-container">
+        <div className="contact-page-text">
+        <div className="contact-page-title">Contact Me</div>
+        <form className="contact-form" onSubmit={onSubmit}>
+          <label className="form-label">
             Name:
             <input
-              className="inputName"
+              className="input-name"
               type="text"
               name="name"
               required
             />
           </label>
-          <label className="formInput">
+          <label className="form-label">
             Email:
             <input
-              className="inputMail"
+              className="input-email"
               type="email"
               name="email"
               required
             />
           </label>
-          <label className="formInput">
+          <label className="form-label">
             Message:
             <br />
             <textarea
-              className="inputMessage"
+              className="input-message"
               name="message"
               required
             />
           </label>
 
-          <button className="sendButton" type="submit">Send</button>
+          <button className="send-button" type="submit">Send</button>
         </form>
+        </div>
       </div>
     </>
   );

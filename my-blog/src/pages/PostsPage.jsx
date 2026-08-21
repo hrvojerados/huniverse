@@ -39,16 +39,16 @@ export default function PostsPage() {
   const visiblePosts = posts.filter(post =>
     hasIntersection(post.tags, selectedTags));
     return (
-      <div id="postPageWraper">
-        <div id="postsPage">
-          <div id="postsContainer">
-            <img src="images/filter.svg" id="filterSvg" /> 
+      <div id="posts-page-wrapper">
+        <div id="posts-page">
+          <div id="posts-container">
+            <img src="images/filter.svg" id="filter-icon" /> 
 
-            <div className="tagsContainer">
+            <div className="tags-container">
               {tags.map((tag) => (
                 <button 
                   key={tag}
-                  className={selectedTags.includes(tag) ? "selectedTag" : "tag"}
+                  className={selectedTags.includes(tag) ? "tag-selected" : "tag"}
                   onClick={() =>
                     setSelectedTags((prev) => toogleTag(tag, prev))
                   }
@@ -59,18 +59,18 @@ export default function PostsPage() {
             </div>
 
             {visiblePosts.map((post) => (
-              <div className="Post" key={post.slug}>
-                <div className="PostCard">
-                  <div className="PostData">
-                    <div className="PostTitle">{post.title}</div>
-                    <div className="DateAndTags">
-                      <p className="Date">{formatDate(post.date)}</p>
-                      <p className="Tags">{formatTags(post.tags)}</p>
+              <div className="post" key={post.slug}>
+                <div className="post-card">
+                  <div className="post-data">
+                    <div className="post-titles">{post.title}</div>
+                    <div className="post-meta">
+                      <p className="post-dates">{formatDate(post.date)}</p>
+                      <p className="post-tags">{formatTags(post.tags)}</p>
                     </div>
                   </div>
 
-                  <Link to={`/posts/${post.slug}`} className="openPostLink">
-                    <div className="open">Open</div>
+                  <Link to={`/posts/${post.slug}`} className="post-link">
+                    <div className="post-open">Open</div>
                   </Link>
                 </div>
               </div>
@@ -80,8 +80,8 @@ export default function PostsPage() {
 
         {(visiblePosts.length === 0) &&
         (
-          <div className="centerer">
-            <div id="noPosts">No posts yet :)</div>
+          <div className="flex-center">
+            <div id="no-posts">No posts yet :)</div>
           </div>)}
       </div>
     );
