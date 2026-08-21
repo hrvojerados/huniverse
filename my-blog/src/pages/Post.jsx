@@ -29,7 +29,8 @@ export default function Post() {
   if (!post) return <h2>Post not found</h2>;
 
   return (
-    <div className="page-container">
+    <div className="page-container page-container-framed">
+      <div className="page-frame">
       <div className="post-title">{post.title}</div>
       <div className="post-date">{formatDate(post.date)}</div>
       <hr/>
@@ -39,6 +40,7 @@ export default function Post() {
           remarkPlugins={[remarkMath, remarkGfm]}>
           {content}
         </Markdown>
+      </div>
       </div>
     </div>
   );

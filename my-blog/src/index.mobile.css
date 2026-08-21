@@ -6,8 +6,8 @@
 
 body {
   background-color: #d6b3b3;
-  background-image: radial-gradient(circle, rgba(0,0,0,0.04) 1px, transparent 1px);
-  background-size: 3px 3px;
+  background-image: radial-gradient(circle, rgba(0,0,0,0.15) 1.2px, transparent 1.2px);
+  background-size: 6px 6px;
   font-family: "Segoe UI", Roboto, sans-serif;
   color: #212529;
   line-height: 1.6;
@@ -280,28 +280,42 @@ p {
 }
 
 /* ==========================================================================
-   About page images
+   About page
    ========================================================================== */
 
-.about-images {
-  float: right;
+.about-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 8px;
-  width: 45vw;
-  margin-top: 10vh;
-  padding: 8px;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.about-box {
   background-color: #ebd9d9;
   border: 2px solid #6b4f4f;
   border-radius: 8px;
+  padding: 16px;
+  font-family: "Tinos", "Times New Roman", Times, serif;
   box-shadow:
     0 6px 16px rgba(0, 0, 0, 0.2),
     0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.about-images img {
+.about-box p {
+  margin: 0 0 1rem 0;
+}
+
+.about-box p:last-child {
+  margin-bottom: 0;
+}
+
+.about-pictures {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+}
+
+.about-pictures img {
   display: block;
-  margin: 0;
   width: 100%;
   height: auto;
   border: 2px solid #6b4f4f;
@@ -309,10 +323,45 @@ p {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
 }
 
-.about-page-text {
-  font-size: 1rem;
-  padding: 16px;
-  font-family: "Tinos", "Times New Roman", Times, serif;
+.about-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.about-links a {
+  color: #1d3557;
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+.page-frame {
+  background-color: #2f3e46;
+  border-style: solid;
+  border-radius: 2vh;
+  margin: 1vh 0 1vh 0;
+  padding: 3vh 4vw 3vh 4vw;
+}
+
+.page-frame .post-title,
+.page-frame .post-date {
+  color: #f5f0e1;
+}
+
+.page-frame .about-title {
+  color: #f5f0e1;
+}
+
+.page-frame .about-title {
+  margin: 0 0 1rem 0;
+}
+
+.page-frame .page-content {
+  box-sizing: border-box;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* ==========================================================================
